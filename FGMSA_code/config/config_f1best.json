@@ -1,0 +1,54 @@
+{
+  "datasetCommonParams": {
+    "featurePath": "/chensiyu/MCSA/feature.pkl",
+    "feature_dims": [
+      768,
+      768,
+      465
+    ],
+    "train_samples": 748,
+    "num_classes": 5,
+    "language": "cn",
+    "KeyEval": "Loss"
+  },
+  "lf_dnn": {
+    "commonParams": {
+      "need_normalized": true,
+      "early_stop": 8
+    },
+    "datasetParams": {
+      "hidden_dims": [
+        128,
+        128,
+        64
+      ],
+      "text_out": 128,
+      "post_fusion_dim": 16,
+      "post_text_dim": 64,
+      "post_audio_dim": 16,
+      "post_video_dim": 16,
+      "dropouts": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "post_dropouts": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "batch_size": 32,
+      "learning_rate": 0.002,
+      "M": 1,
+      "T": 0.0,
+      "A": 0.8,
+      "V": 1,
+      "text_weight_decay": 0.0001,
+      "audio_weight_decay": 0.00001,
+      "video_weight_decay": 0.0001,
+      "fusion_weight_decay": 0.00001,
+      "weight_decay": 0.001
+    }
+  }
+}

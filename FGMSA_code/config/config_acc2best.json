@@ -1,0 +1,114 @@
+{
+  "datasetCommonParams": {
+    "featurePath": "./MCSA/feature.pkl",
+    "feature_dims": [
+      768,
+      768,
+      465
+    ],
+    "train_samples": 748,
+    "num_classes": 5,
+    "language": "cn",
+    "KeyEval": "Loss"
+  },
+  "tfn": {
+    "commonParams": {
+      "need_normalized": true,
+      "early_stop": 8
+    },
+    "datasetParams": {
+      "hidden_dims": [
+        64,
+        64,
+        32,
+        32
+      ],
+      "text_out": 256,
+      "post_fusion_dim": 16,
+      "post_text_dim": 64,
+      "post_audio_dim": 32,
+      "post_video_dim": 32,
+      "dropouts": [0.2, 0.2, 0.2, 0.2],
+      "post_dropouts": [0.2, 0.2, 0.2, 0.2],
+      "batch_size": 64,
+      "learning_rate": 0.0005,
+      "M": 0.8,
+      "T": 1.0,
+      "A": 0.8,
+      "V": 0.4,
+      "text_weight_decay": 0.0,
+      "audio_weight_decay": 0.0,
+      "video_weight_decay": 0.0,
+      "fusion_weight_decay": 0.00001,
+      "weight_decay": 0.001
+    }
+  },
+  "lmf": {
+    "commonParams": {
+      "need_normalized": true,
+      "early_stop": 8
+    },
+    "datasetParams": {
+      "hidden_dims": [64, 64, 32, 32],
+      "post_text_dim": 8,
+      "post_audio_dim": 16,
+      "post_video_dim": 8,
+      "post_fusion_dim": 16,
+      "dropouts": [0.4, 0.4, 0.4, 0.4],
+      "post_dropouts": [0.2, 0.2, 0.2, 0.2],
+      "rank": 5,
+      "batch_size": 128,
+      "learning_rate": 0.002,
+      "factor_lr": 0.0001,
+      "M": 0.4,
+      "T": 0.8,
+      "A": 0.8,
+      "V": 0.8,
+      "text_weight_decay": 0.00001,
+      "audio_weight_decay": 0.0001,
+      "video_weight_decay": 0.00001,
+      "fusion_weight_decay": 0.0001,
+      "weight_decay": 0.005
+    }
+  },
+  "lf_dnn": {
+    "commonParams": {
+      "need_normalized": true,
+      "early_stop": 8
+    },
+    "datasetParams": {
+      "hidden_dims": [
+        128,
+        128,
+        64
+      ],
+      "text_out": 128,
+      "post_fusion_dim": 16,
+      "post_text_dim": 64,
+      "post_audio_dim": 16,
+      "post_video_dim": 16,
+      "dropouts": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "post_dropouts": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "batch_size": 32,
+      "learning_rate": 0.002,
+      "M": 1,
+      "T": 0.0,
+      "A": 0.8,
+      "V": 1,
+      "text_weight_decay": 0.0001,
+      "audio_weight_decay": 0.00001,
+      "video_weight_decay": 0.0001,
+      "fusion_weight_decay": 0.00001,
+      "weight_decay": 0.001
+    }
+  }
+}
